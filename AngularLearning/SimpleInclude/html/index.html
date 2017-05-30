@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"> </script>
+	</head>
+	<body ng-app="mainApp" >
+		
+		<div ng-controller="mainCtrl as mc">
+			<div ng-include="mc.signInTemplate" > </div>
+		</div>
+		
+		<div>
+			
+			<div ui-view> </div>
+		</div>
+		
+		<script src="util/utils.js"> </script>
+		<script src="signin/signInController.js"> </script>
+		
+		<script src="main.js"> </script>
+		<!--script>
+			angular.module("mainApp",["signIn"]);
+			angular.module("signIn",[]);
+			angular.module("signIn").controller("signInCtrl", function(){
+			alert("hello");
+			});
+		</script-->
+		
+		
+	</body>
+</html>

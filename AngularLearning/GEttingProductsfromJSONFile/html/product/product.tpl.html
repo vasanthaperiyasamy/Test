@@ -1,0 +1,18 @@
+
+<div ng-controller="productCtrl as pc">
+	<table>
+		<tr>
+			<td>Model</td>
+			<td>Price</td>
+			<td>Description</td>
+		</tr>
+		
+		<tr  ng-repeat="product in pc.products">
+			<td ng-bind="product.Model">Model</td>
+			<td ng-bind="product.Price">Price</td>
+			<td ng-bind="product.Description">Description</td>
+		</tr>
+		
+	</table>
+		
+</div>

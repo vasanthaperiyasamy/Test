@@ -1,0 +1,50 @@
+<div ng-controller="signInCtrl as sc">
+				<form name="signin" >
+					<div>
+						<label> Name : </label> 
+						<input type="text" name="uName" ng-model="sc.user.usrName" bs-alphabet-only ng-minlength="5" ng-maxlength="15" ng-pattern="sc.alphaPattern.alphabetOnly" ng-required="true"> </input>
+						<p ng-if="signin.uName.$error.pattern">Invalid Pattern </p>
+						<p ng-if="signin.uName.$error.minlength">Name should have minimum of 5 characters </p>
+						<p ng-if="signin.uName.$error.maxlength">Name should not have maximimum of 15 characters </p>
+						<p ng-if="signin.uName.$error.required">Name required </p>						
+					</div>
+					
+					<div>
+						<label> Password : </label>
+						<input type="password" name="uPassword" ng-model="sc.user.usrPassword" > </input>						
+					</div>
+					
+					
+					<div>
+						<label> Phone Number : </label>
+						<input type="phoneno" name="uPhoneNo" ng-model="sc.user.usrPhone" length="10" bs-number-only > </input>						
+					</div>
+					
+					
+					<div>
+						<label> Email : </label>
+						<input type="text" name="uEmail" ng-model="sc.user.usrEmail" > </input>						
+					</div>
+					
+					
+					<div>
+						<label> Gender : </label>
+						<input type="radio" name="uGender" value="M" ng-model="sc.user.usrGender" > MALE</input>
+						<input type="radio" name="uGender" value="F" ng-model="sc.user.usrGender" >FEMALE </input>												
+					</div>
+					
+					<div>
+						<label> Country : </label>
+						<select name="uCountry" ng-model="sc.user.country" ng-options="country.name +'-'+country.code for country in sc.countries" > </select>											
+					</div>
+					<div>
+						<label> I agree : </label>
+						<input type="checkbox" name="uAgree" ng-model="sc.user.usrAgree" > </input>
+																	
+					</div>
+					
+				</form>
+				{{sc.user}}  
+				
+				
+		</div>

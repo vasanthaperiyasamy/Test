@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"> </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+	</head>
+	<body ng-app="mainApp" >
+		
+		<div ng-controller="mainCtrl as mc">
+			<div ng-include="mc.signInTemplate" > </div>
+		</div>
+		<bs-brand-name> 
+		</bs-brand-name>
+		
+		
+		<div>
+			
+			<div ui-view> </div>
+		</div>
+	<label>USA : {{"1236547890"|phoneFormatter:"US"}} </label>
+	<label>INDIA : {{"1236547890"|phoneFormatter:"IN"}} </label>
+	<bs-transclude-ex> <h1>I am from index page </h1>
+	</bs-transclude-ex>
+			
+		<script src="util/utils.js"> </script>
+		<script src="util/directives.js"> </script>
+		<script src="util/filter.js"> </script>
+		<script src="signin/signInController.js"> </script>
+		<script src="product/wmproduct.js"> </script>
+		<script src="main.js"> </script>
+		<!--script>
+			angular.module("mainApp",["signIn"]);
+			angular.module("signIn",[]);
+			angular.module("signIn").controller("signInCtrl", function(){
+			alert("hello");
+			});
+		</script-->
+		
+		
+	</body>
+</html>
